@@ -20,11 +20,14 @@ export default function HomePage(): JSX.Element {
 
 					{/* Language Selection */}
 					<div className="mb-16">
-						<h2 className="text-5xl font-bold text-center mb-2">
-							{t("landing.languagePrompt")}
-						</h2>
-
-						<LocaleSwitcher />
+						<Link href="/quiz">
+							<Button
+								className="transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale"
+								size="lg"
+							>
+								Start quiz
+							</Button>
+						</Link>
 					</div>
 
 					{/* Scroll indicator */}
@@ -61,7 +64,7 @@ export default function HomePage(): JSX.Element {
 					</div>
 
 					<Link href="https://www.arkadtlth.se/host">
-						<Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-xl font-medium rounded-full mb-16 transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale">
+						<Button className="mb-12 transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale">
 							{t("landing.readMore")}
 						</Button>
 					</Link>

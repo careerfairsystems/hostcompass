@@ -23,44 +23,112 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 	const calculateRole = (answers: number[]): Role => {
 		// CSV data with role answers for 4 questions: Grupper, Företagskontakt, Servicemindset, Struktur
 		const roleData = [
-			{ name: { sv: "Eventvärd", en: "Event host" }, answers: [2, 4, 4, 2], description: "Som Eventvärd kommer du tillsammans med dina medvärdar leverera event veckan innan och under ARKAD. Du kommer bland annat förbereda lokalerna inför eventen, välkomna gäster och se till att både företag och besökare blir nöjda med eventet. Denna roll passar dig som är serviceminded och som vill ha kontakt med företagen såväl som besökarna!" },
-			{ name: { sv: "Mediavärd", en: "Media host" }, answers: [1, 4, 1, 4], description: "Som mediavärd kommer du främst att vara delaktig i att dokumentera ARKADs mässa och bankett. Rollen passar dig som har ett intresse för foto och/eller film, som gillar att mingla bland företag och studenter och som tycker om självständigt arbete där du får utrymme att ta egna kreativa initiativ." },
-			{ name: { sv: "Interior Design Värd", en: "Interior Design Host" }, answers: [3, 1, 1, 3], description: "Är du intresserad av att dekorera och tycker det är kul med inredningsdesign? Som Interior Design Värd har du i uppgift att hjälpa till att få mässan att vara estetiskt tilltalande samtidigt som den ger ett professionellt intryck." },
-			{ name: { sv: "Logistikvärd", en: "Logistics host" }, answers: [3, 3, 5, 3], description: "Som logistikvärd kommer du tillsammans med logistikgruppen se till att allt funkar som det ska under mässdagarna. Ni står för samordning, organisation och transport av företagens gods och kommer hjälpa till att ställa i ordning allt på mässområdet." },
-			{ name: { sv: "Garderobsvärd", en: "Wardrobe host" }, answers: [1, 4, 5, 2], description: "Som garderobsvärd håller du, tillsammans med andra garderobsvärdar, koll på en av våra garderober där företagsrepresentanter kan lämna och hämta sina ytterkläder. Din huvudsakliga uppgift är hantering av garderobsbiljetter." },
-			{ name: { sv: "Info Desk Värd", en: "Info Desk Host" }, answers: [2, 3, 5, 3], description: "Är du hjälpsam och har lätt att hålla koll på information? Som Info Desk Host står du i en av informationsdiskarna i entrén till våra mässlokaler. Din främsta uppgift är att se till så företagsrepresentanter och studenter får svar på alla frågor som uppstår." },
-			{ name: { sv: "Bankett värd", en: "Banquet host" }, answers: [5, 1, 2, 1], description: "Som Bankett värd kommer du hjälpa till med att vika servetter, fixa och dekorera lokalen inför sittningen under bankettdagen och sen hjälpa till att städa efter hela mässan är över." },
-			{ name: { sv: "Interior", en: "Interior" }, answers: [2, 1, 1, 3], description: "Gillar du inredningsdesign och att dekorera? Sök Interior Host! Som Interior Host hjälper du dina koordinatorer med att dekorera självaste mässan." },
-			{ name: { sv: "Lunchvärd", en: "Lunch host" }, answers: [5, 3, 5, 2], description: "Som lunchvärd kommer du att välkomna och servera lunch till företagsrepresentanter och funktionärer. Ditt ansvar är att möta lungästerna i dörren, lägga upp mat på tallrikar, packa take-away lådor och hålla ordning i matsalen." },
-			{ name: { sv: "Loungevärd", en: "Lounge host" }, answers: [4, 4, 5, 3], description: "Gillar du att arbeta med människor och skapa en trevlig och välkomnande atmosfär? Att vara Lounge Värd innebär att du kommer att ta hand om loungerna som är tillgängliga för utställarna och de engagerade studenterna." },
-			{ name: { sv: "Company host", en: "Company host" }, answers: [1, 5, 5, 3], description: "Som Company Host kommer du att bli tilldelad två företag som du kommer att assistera inför och under mässan. Din huvudsakliga uppgift är att hjälpa företaget och vara dess informationskälla." },
-			{ name: { sv: "Power Supply & Network Värd", en: "Power Supply & Network Host" }, answers: [3, 1, 2, 4], description: "Som Power Supply & Network Host kommer du att vara en del i arbetet med allt som rör el och nätverk under mässan. Du kommer inför mässan vara delaktig i planeringen kring hur all el och nätverk skall förläggas." }
+			{
+				name: { sv: "Eventvärd", en: "Event host" },
+				answers: [2, 4, 4, 2],
+				description:
+					"Som Eventvärd kommer du tillsammans med dina medvärdar leverera event veckan innan och under ARKAD. Du kommer bland annat förbereda lokalerna inför eventen, välkomna gäster och se till att både företag och besökare blir nöjda med eventet. Denna roll passar dig som är serviceminded och som vill ha kontakt med företagen såväl som besökarna!",
+			},
+			{
+				name: { sv: "Mediavärd", en: "Media host" },
+				answers: [1, 4, 1, 4],
+				description:
+					"Som mediavärd kommer du främst att vara delaktig i att dokumentera ARKADs mässa och bankett. Rollen passar dig som har ett intresse för foto och/eller film, som gillar att mingla bland företag och studenter och som tycker om självständigt arbete där du får utrymme att ta egna kreativa initiativ.",
+			},
+			{
+				name: { sv: "Interior Design Värd", en: "Interior Design Host" },
+				answers: [3, 1, 1, 3],
+				description:
+					"Är du intresserad av att dekorera och tycker det är kul med inredningsdesign? Som Interior Design Värd har du i uppgift att hjälpa till att få mässan att vara estetiskt tilltalande samtidigt som den ger ett professionellt intryck.",
+			},
+			{
+				name: { sv: "Logistikvärd", en: "Logistics host" },
+				answers: [3, 3, 5, 3],
+				description:
+					"Som logistikvärd kommer du tillsammans med logistikgruppen se till att allt funkar som det ska under mässdagarna. Ni står för samordning, organisation och transport av företagens gods och kommer hjälpa till att ställa i ordning allt på mässområdet.",
+			},
+			{
+				name: { sv: "Garderobsvärd", en: "Wardrobe host" },
+				answers: [1, 4, 5, 2],
+				description:
+					"Som garderobsvärd håller du, tillsammans med andra garderobsvärdar, koll på en av våra garderober där företagsrepresentanter kan lämna och hämta sina ytterkläder. Din huvudsakliga uppgift är hantering av garderobsbiljetter.",
+			},
+			{
+				name: { sv: "Info Desk Värd", en: "Info Desk Host" },
+				answers: [2, 3, 5, 3],
+				description:
+					"Är du hjälpsam och har lätt att hålla koll på information? Som Info Desk Host står du i en av informationsdiskarna i entrén till våra mässlokaler. Din främsta uppgift är att se till så företagsrepresentanter och studenter får svar på alla frågor som uppstår.",
+			},
+			{
+				name: { sv: "Bankett värd", en: "Banquet host" },
+				answers: [5, 1, 2, 1],
+				description:
+					"Som Bankett värd kommer du hjälpa till med att vika servetter, fixa och dekorera lokalen inför sittningen under bankettdagen och sen hjälpa till att städa efter hela mässan är över.",
+			},
+			{
+				name: { sv: "Interior", en: "Interior" },
+				answers: [2, 1, 1, 3],
+				description:
+					"Gillar du inredningsdesign och att dekorera? Sök Interior Host! Som Interior Host hjälper du dina koordinatorer med att dekorera självaste mässan.",
+			},
+			{
+				name: { sv: "Lunchvärd", en: "Lunch host" },
+				answers: [5, 3, 5, 2],
+				description:
+					"Som lunchvärd kommer du att välkomna och servera lunch till företagsrepresentanter och funktionärer. Ditt ansvar är att möta lungästerna i dörren, lägga upp mat på tallrikar, packa take-away lådor och hålla ordning i matsalen.",
+			},
+			{
+				name: { sv: "Loungevärd", en: "Lounge host" },
+				answers: [4, 4, 5, 3],
+				description:
+					"Gillar du att arbeta med människor och skapa en trevlig och välkomnande atmosfär? Att vara Lounge Värd innebär att du kommer att ta hand om loungerna som är tillgängliga för utställarna och de engagerade studenterna.",
+			},
+			{
+				name: { sv: "Company host", en: "Company host" },
+				answers: [1, 5, 5, 3],
+				description:
+					"Som Company Host kommer du att bli tilldelad två företag som du kommer att assistera inför och under mässan. Din huvudsakliga uppgift är att hjälpa företaget och vara dess informationskälla.",
+			},
+			{
+				name: {
+					sv: "Power Supply & Network Värd",
+					en: "Power Supply & Network Host",
+				},
+				answers: [3, 1, 2, 4],
+				description:
+					"Som Power Supply & Network Host kommer du att vara en del i arbetet med allt som rör el och nätverk under mässan. Du kommer inför mässan vara delaktig i planeringen kring hur all el och nätverk skall förläggas.",
+			},
 		];
 
 		// Calculate Euclidean distance between user answers and each role
-		const calculateDistance = (userAnswers: number[], roleAnswers: number[]): number => {
+		const calculateDistance = (
+			userAnswers: number[],
+			roleAnswers: number[],
+		): number => {
 			return Math.sqrt(
 				userAnswers.reduce((sum, answer, index) => {
 					return sum + Math.pow(answer - roleAnswers[index], 2);
-				}, 0)
+				}, 0),
 			);
 		};
 
 		// Find the 3 closest matching roles
-		const rolesWithDistances = roleData.map(role => ({
+		const rolesWithDistances = roleData.map((role) => ({
 			...role,
-			distance: calculateDistance(answers, role.answers)
+			distance: calculateDistance(answers, role.answers),
 		}));
 
-		const sortedRoles = rolesWithDistances.sort((a, b) => a.distance - b.distance);
+		const sortedRoles = rolesWithDistances.sort(
+			(a, b) => a.distance - b.distance,
+		);
 		const top3Roles = sortedRoles.slice(0, 3);
 
 		return {
 			name: { sv: "Dina Bästa Matchningar", en: "Your Best Matches" },
 			recommendations: top3Roles.map((role, index) => ({
 				title: role.name.sv,
-				description: role.description
-			}))
+				description: role.description,
+			})),
 		};
 	};
 	const personalityType = calculateRole(answers);
@@ -90,7 +158,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 						</div>
 					</div>
 
-					<div className="space-y-4">
+					{/* <div className="space-y-4">
 						<h3 className="text-xl font-semibold text-foreground">
 							Dina svar:
 						</h3>
@@ -109,7 +177,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 								</div>
 							))}
 						</div>
-					</div>
+					</div> */}
 
 					<div className="flex justify-center pt-6">
 						<Link href="/" className="mr-4">

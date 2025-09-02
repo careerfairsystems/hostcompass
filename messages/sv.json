@@ -1,46 +1,46 @@
 {
-  "index": {
-    "title": "ARKAD - Personlighetstest",
-    "description": "Upptäck din personlighetstyp med ARKAD:s personlighetstest"
-  },
-  "navigation": {
-    "home": "Hem",
-    "quiz": "Test",
-    "about": "Om oss"
-  },
-  "landing": {
-    "title": "Vårdkompassen",
-    "languagePrompt": "Välj ditt språk",
-    "swedish": "Svenska",
-    "english": "English",
-    "mainHeading": "Vilka värdposter i ARKAD passar dig?",
-    "description1": "Med vårdkompassen hoppas ARKAD kunna hjälpa dig att hitta något som passar just dig!",
-    "description2": "Följ stegen ovan och få redan på 3 poster som skulle kunna vara perfekta för dig.",
-    "description3": "Rekryteringen pågår mellan den 16 september och 6 oktober.",
-    "description4": "Läs mer om alla poster och rekryteringen här:",
-    "readMore": "LÄS MER"
-  },
-  "quiz": {
-    "title": "Personlighetstest",
-    "question": "Fråga {number} av {total}",
-    "next": "Nästa",
-    "previous": "Föregående",
-    "submit": "Skicka",
-    "results": "Ditt Resultat"
-  },
-  "footer": {
-    "when": "När är mässan?",
-    "dates": "11-12 November 2025",
-    "tuesday": "Tisdag: 10:00 - 16:00",
-    "wednesday": "Onsdag: 10:00 - 15:00",
-    "social": "Följ oss på sociala medier",
-    "app": "Ladda ner ARKAD-appen",
-    "contact": "Kontakta oss på business.arkad@tlth.se",
-    "fairTitle": "ARKAD Karriärmässa",
-    "address1": "Teknologkåren vid Lunds universitet",
-    "address2": "John Ericssons Väg 3",
-    "address3": "223 63, Lund",
-    "phone": "+46 (0)704 18 79 27",
-    "phoneHours": "Tillgängliga telefontider 10-16"
-  }
+	"index": {
+		"title": "ARKAD - Värdkompass",
+		"description": "Hitta din värdposter med ARKAD:s värdkompass"
+	},
+	"navigation": {
+		"home": "Hem",
+		"quiz": "Test",
+		"about": "Om oss"
+	},
+	"landing": {
+		"title": "Värdkompassen",
+		"languagePrompt": "Välj ditt språk",
+		"swedish": "Svenska",
+		"english": "English",
+		"mainHeading": "Vilka värdposter i ARKAD passar dig?",
+		"description1": "Med värdkompassen hoppas ARKAD kunna hjälpa dig att hitta något som passar just dig!",
+		"description2": "Följ stegen ovan och få redan på 3 poster som skulle kunna vara perfekta för dig.",
+		"description3": "Rekryteringen pågår mellan den 16 september och 6 oktober.",
+		"description4": "Läs mer om alla poster och rekryteringen här:",
+		"readMore": "LÄS MER"
+	},
+	"quiz": {
+		"title": "Värdkompassen",
+		"question": "Fråga {number} av {total}",
+		"next": "Nästa",
+		"previous": "Föregående",
+		"submit": "Skicka",
+		"results": "Ditt Resultat"
+	},
+	"footer": {
+		"when": "När är mässan?",
+		"dates": "11-12 November 2025",
+		"tuesday": "Tisdag: 10:00 - 16:00",
+		"wednesday": "Onsdag: 10:00 - 15:00",
+		"social": "Följ oss på sociala medier",
+		"app": "Ladda ner ARKAD-appen",
+		"contact": "Kontakta oss på business.arkad@tlth.se",
+		"fairTitle": "ARKAD Karriärmässa",
+		"address1": "Teknologkåren vid Lunds universitet",
+		"address2": "John Ericssons Väg 3",
+		"address3": "223 63, Lund",
+		"phone": "+46 (0)704 18 79 27",
+		"phoneHours": "Tillgängliga telefontider 10-16"
+	}
 }

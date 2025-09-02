@@ -12,32 +12,42 @@ All colors MUST be HSL.
 		--background: 214, 80%, 8%;
 		--foreground: 0 0% 100%;
 
-		--primary: 18, 92%, 56%;
-		--primary-foreground: 0, 0%, 100%;
+		--primary: 18 92% 56%;
+		--primary-foreground: 0 0% 100%;
 
 		--primary-glow: 200 100% 75%;
 
 		--card: 210 35% 15%;
 		--card-foreground: 0 0% 100%;
 
-		--popover: 210 35% 15%;
-		--popover-foreground: 0 0% 100%;
+		--secondary: oklch(0.97 0 0);
+		--secondary-foreground: oklch(0.205 0 0);
 
-		--secondary: 210 25% 25%;
-		--secondary-foreground: 0 0% 100%;
+		--accent: oklch(0.97 0 0);
+		--accent-foreground: oklch(0.205 0 0);
 
-		--muted: 210 25% 20%;
-		--muted-foreground: 210 10% 70%;
-
-		--accent: 25 100% 65%;
-		--accent-foreground: 210 35% 12%;
-
-		--destructive: 0 84.2% 60.2%;
-		--destructive-foreground: 210 40% 98%;
-
-		--border: 210 25% 25%;
-		--input: 210 25% 20%;
-		--ring: 200 100% 60%;
+		--radius: 0.625rem;
+		--popover: oklch(1 0 0);
+		--popover-foreground: oklch(0.145 0 0);
+		--muted: oklch(0.97 0 0);
+		--muted-foreground: oklch(0.556 0 0);
+		--destructive: oklch(0.577 0.245 27.325);
+		--border: oklch(0.922 0 0);
+		--input: oklch(0.922 0 0);
+		--ring: oklch(0.708 0 0);
+		--chart-1: oklch(0.646 0.222 41.116);
+		--chart-2: oklch(0.6 0.118 184.704);
+		--chart-3: oklch(0.398 0.07 227.392);
+		--chart-4: oklch(0.828 0.189 84.429);
+		--chart-5: oklch(0.769 0.188 70.08);
+		--sidebar: oklch(0.985 0 0);
+		--sidebar-foreground: oklch(0.145 0 0);
+		--sidebar-primary: oklch(0.205 0 0);
+		--sidebar-primary-foreground: oklch(0.985 0 0);
+		--sidebar-accent: oklch(0.97 0 0);
+		--sidebar-accent-foreground: oklch(0.205 0 0);
+		--sidebar-border: oklch(0.922 0 0);
+		--sidebar-ring: oklch(0.708 0 0);
 
 		/* ARKAD-specific design tokens */
 		--arkad-gradient: linear-gradient(
@@ -52,64 +62,6 @@ All colors MUST be HSL.
 		);
 		--arkad-shadow: 0 10px 30px -10px hsl(200 100% 60% / 0.3);
 		--arkad-glow: 0 0 40px hsl(200 100% 75% / 0.4);
-		--transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-		--radius: 0.5rem;
-
-		--sidebar-background: 0 0% 98%;
-
-		--sidebar-foreground: 240 5.3% 26.1%;
-
-		--sidebar-primary: 240 5.9% 10%;
-
-		--sidebar-primary-foreground: 0 0% 98%;
-
-		--sidebar-accent: 240 4.8% 95.9%;
-
-		--sidebar-accent-foreground: 240 5.9% 10%;
-
-		--sidebar-border: 220 13% 91%;
-
-		--sidebar-ring: 217.2 91.2% 59.8%;
-	}
-
-	.dark {
-		/* Dark mode maintains same ARKAD colors */
-		--background: 210 35% 12%;
-		--foreground: 0 0% 100%;
-
-		--card: 210 35% 15%;
-		--card-foreground: 0 0% 100%;
-
-		--popover: 210 35% 15%;
-		--popover-foreground: 0 0% 100%;
-
-		--primary: 200 100% 60%;
-		--primary-foreground: 210 35% 12%;
-
-		--secondary: 210 25% 25%;
-		--secondary-foreground: 0 0% 100%;
-
-		--muted: 210 25% 20%;
-		--muted-foreground: 210 10% 70%;
-
-		--accent: 25 100% 65%;
-		--accent-foreground: 210 35% 12%;
-
-		--destructive: 0 62.8% 30.6%;
-		--destructive-foreground: 210 40% 98%;
-
-		--border: 210 25% 25%;
-		--input: 210 25% 20%;
-		--ring: 200 100% 60%;
-		--sidebar-background: 210 35% 12%;
-		--sidebar-foreground: 0 0% 100%;
-		--sidebar-primary: 200 100% 60%;
-		--sidebar-primary-foreground: 210 35% 12%;
-		--sidebar-accent: 210 25% 25%;
-		--sidebar-accent-foreground: 0 0% 100%;
-		--sidebar-border: 210 25% 25%;
-		--sidebar-ring: 200 100% 60%;
 	}
 }
 
