@@ -1,39 +1,34 @@
 export interface QuizQuestion {
-  id: number;
-  question: string;
-  leftStatement: string;
-  rightStatement: string;
+	id: number;
+	question: string;
+	leftStatement: string;
+	rightStatement: string;
 }
 
 export const quizQuestions: QuizQuestion[] = [
-  {
-    id: 1,
-    question: "Hur föredrar du att arbeta?",
-    leftStatement: "Jag gillar att arbeta i mindre grupper",
-    rightStatement: "Jag gillar att arbeta i stora grupper"
-  },
-  {
-    id: 2,
-    question: "När du fattar beslut...",
-    leftStatement: "Jag tar tid att tänka igenom allt noggrant",
-    rightStatement: "Jag fattar beslut snabbt baserat på intuition"
-  },
-  {
-    id: 3,
-    question: "På en fest eller sammankomst...",
-    leftStatement: "Jag föredrar djupa samtal med få personer",
-    rightStatement: "Jag älskar att mingla och träffa många"
-  },
-  {
-    id: 4,
-    question: "När du lär dig något nytt...",
-    leftStatement: "Jag föredrar att studera själv eller i lugn miljö",
-    rightStatement: "Jag lär mig bäst genom diskussioner med andra"
-  },
-  {
-    id: 5,
-    question: "I problemlösning...",
-    leftStatement: "Jag föredrar att analysera och reflektera",
-    rightStatement: "Jag brainstormar gärna med teamet"
-  }
+	{
+		id: 1,
+		question: "Grupper",
+		leftStatement: "Jag gillar att arbeta i mindre grupper",
+		rightStatement: "Jag gillar att arbeta i stora grupper",
+	},
+	{
+		id: 2,
+		question: "Företagskontakt",
+		leftStatement: "Jag är inte intresserad av att ha kontakt med företag",
+		rightStatement: "Jag är intresserad av att ha kontakt med företag",
+	},
+	{
+		id: 3,
+		question: "Servicemindset",
+		leftStatement: "Jag önskar att inte behöva vara service minded",
+		rightStatement: "Jag älskar att vara serviceminded",
+	},
+	{
+		id: 4,
+		question: "Struktur",
+		leftStatement:
+			"Jag tycker det är bekvämt när någon säger till mig vad jag ska göra",
+		rightStatement: "Jag gillar att ta iniativ",
+	},
 ];

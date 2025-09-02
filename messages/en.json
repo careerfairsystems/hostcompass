@@ -13,12 +13,12 @@
 		"languagePrompt": "Please select your preferred language",
 		"swedish": "Swedish",
 		"english": "English",
-		"mainHeading": "Which healthcare positions at ARKAD suit you?",
-		"description1": "With the healthcare compass, ARKAD hopes to help you find something that fits you perfectly!",
-		"description2": "Follow the steps above and get 3 positions that could be perfect for you.",
-		"description3": "Recruitment is ongoing between September 16 and October 6.",
-		"description4": "Read more about all positions and recruitment here:",
-		"readMore": "READ MORE"
+		"mainHeading": "Vilka värdposter i ARKAD passar dig?",
+		"description1": "Med vårdkompassen hoppas ARKAD kunna hjälpa dig att hitta något som passar just dig!",
+		"description2": "Följ stegen ovan och få redan på 3 poster som skulle kunna vara perfekta för dig.",
+		"description3": "Rekryteringen pågår mellan den 16 september och 6 oktober.",
+		"description4": "Läs mer om alla poster och rekryteringen här:",
+		"readMore": "LÄS MER"
 	},
 	"quiz": {
 		"title": "Host compass",

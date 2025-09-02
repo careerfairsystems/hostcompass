@@ -12,15 +12,16 @@ All colors MUST be HSL.
 		--background: 214, 80%, 8%;
 		--foreground: 0 0% 100%;
 
+		--primary: 18, 92%, 56%;
+		--primary-foreground: 0, 0%, 100%;
+
+		--primary-glow: 200 100% 75%;
+
 		--card: 210 35% 15%;
 		--card-foreground: 0 0% 100%;
 
 		--popover: 210 35% 15%;
 		--popover-foreground: 0 0% 100%;
-
-		--primary: 18, 92%, 56%;
-		--primary-foreground: 0, 0%, 100%;
-		--primary-glow: 200 100% 75%;
 
 		--secondary: 210 25% 25%;
 		--secondary-foreground: 0 0% 100%;
@@ -41,12 +42,12 @@ All colors MUST be HSL.
 		/* ARKAD-specific design tokens */
 		--arkad-gradient: linear-gradient(
 			135deg,
-			hsl(200 100% 60%),
-			hsl(210 100% 45%)
+			hsl(18, 92%, 56%),
+			hsl(20, 92%, 56%)
 		);
 		--arkad-gradient-subtle: linear-gradient(
 			180deg,
-			hsl(210 35% 12%),
+			hsl(210, 35%, 12%),
 			hsl(210 40% 15%)
 		);
 		--arkad-shadow: 0 10px 30px -10px hsl(200 100% 60% / 0.3);

@@ -50,7 +50,7 @@ export default function HomePage(): JSX.Element {
 			<div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
 				<div className="text-center max-w-4xl mx-auto animate-fade-in">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-						{t("landing.mainHeading")}
+						Vilka värdposter i ARKAD passar dig?
 					</h2>
 
 					<div className="space-y-6 text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ export default function HomePage(): JSX.Element {
 						<p className="font-medium">{t("landing.description4")}</p>
 					</div>
 
-					<Link href="/quiz">
+					<Link href="https://www.arkadtlth.se/host">
 						<Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-xl font-medium rounded-full mb-16 transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale">
 							{t("landing.readMore")}
 						</Button>
@@ -69,7 +69,7 @@ export default function HomePage(): JSX.Element {
 					{/* Team Photo */}
 					<div className="mb-16 hover-scale">
 						<img
-							src="/lovable-uploads/4f55f2f9-8a83-44ce-afe8-946335353240.png"
+							src="/group-photo.jpg"
 							alt="ARKAD Team Photo"
 							className="rounded-lg shadow-2xl max-w-full h-auto mx-auto"
 						/>
