@@ -2,6 +2,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
+import LocaleSwitcher from "@/components/locale-selector";
 
 type Props = {
 	children: React.ReactNode;
@@ -18,7 +19,13 @@ export default async function LocaleLayout({ children, params }: Props) {
 	return (
 		<html className="h-full" lang={locale}>
 			<body className={"flex h-full flex-col"}>
-				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+				<NextIntlClientProvider>
+					<div className="fixed top-4 right-4 z-10">
+						<LocaleSwitcher />
+					</div>
+
+					{children}
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
