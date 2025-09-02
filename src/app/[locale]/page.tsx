@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { Link } from "../../../navigation";
 
 export default function HomePage(): JSX.Element {

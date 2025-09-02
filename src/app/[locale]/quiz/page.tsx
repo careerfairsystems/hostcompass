@@ -48,7 +48,7 @@ export default function QuizPage(): JSX.Element {
 							ARKAD
 						</div>
 						<h1 className="text-4xl font-bold text-center bg-arkad-gradient bg-clip-text text-transparent">
-							{t('quiz.results')}
+							{t("quiz.results")}
 						</h1>
 					</div>
 					<QuizResults answers={answers} onRestart={handleRestart} />
@@ -65,12 +65,12 @@ export default function QuizPage(): JSX.Element {
 						ARKAD
 					</div>
 					<h1 className="text-4xl font-bold text-center bg-arkad-gradient bg-clip-text text-transparent">
-						{t('quiz.title')}
+						{t("quiz.title")}
 					</h1>
 				</div>
 
 				<ProgressBar
-					currentStep={currentQuestion + 1}
+					currentStep={currentQuestion}
 					totalSteps={quizQuestions.length}
 				/>
 
