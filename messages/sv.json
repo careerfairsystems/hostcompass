@@ -18,7 +18,9 @@
 		"description2": "Följ stegen ovan och få redan på 3 poster som skulle kunna vara perfekta för dig.",
 		"description3": "Rekryteringen pågår mellan den 16 september och 6 oktober.",
 		"description4": "Läs mer om alla poster och rekryteringen här:",
-		"readMore": "LÄS MER"
+		"readMore": "LÄS MER",
+		"startQuiz": "Starta quiz",
+		"teamPhotoAlt": "ARKAD Team Foto"
 	},
 	"quiz": {
 		"title": "Värdkompassen",
@@ -26,7 +28,11 @@
 		"next": "Nästa",
 		"previous": "Föregående",
 		"submit": "Skicka",
-		"results": "Ditt Resultat"
+		"results": "Ditt Resultat",
+		"step": "Steg {currentStep} av {totalSteps}",
+		"topRecommendations": "Top 3 rekommendationer för dig:",
+		"backToHome": "Tillbaka till startsidan",
+		"retakeQuiz": "Gör testet igen"
 	},
 	"footer": {
 		"when": "När är mässan?",
@@ -41,6 +47,36 @@
 		"address2": "John Ericssons Väg 3",
 		"address3": "223 63, Lund",
 		"phone": "+46 (0)704 18 79 27",
-		"phoneHours": "Tillgängliga telefontider 10-16"
+		"phoneHours": "Tillgängliga telefontider 10-16",
+		"facebook": "Facebook",
+		"instagram": "Instagram",
+		"linkedin": "LinkedIn",
+		"email": "arkad@tlth.se"
+	},
+	"questions": {
+		"groups": {
+			"title": "Grupper",
+			"left": "Jag gillar att arbeta i mindre grupper",
+			"right": "Jag gillar att arbeta i stora grupper"
+		},
+		"companyContact": {
+			"title": "Företagskontakt",
+			"left": "Jag är inte intresserad av att ha kontakt med företag",
+			"right": "Jag är intresserad av att ha kontakt med företag"
+		},
+		"serviceMindset": {
+			"title": "Servicemindset",
+			"left": "Jag önskar att inte behöva vara service minded",
+			"right": "Jag älskar att vara serviceminded"
+		},
+		"structure": {
+			"title": "Struktur",
+			"left": "Jag tycker det är bekvämt när någon säger till mig vad jag ska göra",
+			"right": "Jag gillar att ta iniativ"
+		}
+	},
+	"locales": {
+		"english": "English",
+		"svenska": "Svenska"
 	}
 }

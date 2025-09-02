@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 interface QuizResultsProps {
 	answers: number[];
 	onRestart: () => void;
@@ -19,6 +20,7 @@ type Role = {
 };
 
 export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
+	const t = useTranslations();
 	// Calculate personality type based on answers
 	const calculateRole = (answers: number[]): Role => {
 		// CSV data with role answers for 4 questions: Grupper, Företagskontakt, Servicemindset, Struktur
@@ -137,7 +139,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 			<Card className="shadow-arkad border-0 bg-card">
 				<CardHeader className="text-center pb-4">
 					<CardTitle className="text-3xl font-bold bg-arkad-gradient bg-clip-text text-transparent font-arkad">
-						Top 3 rekommendationer för dig:
+						{t("quiz.topRecommendations")}
 					</CardTitle>
 				</CardHeader>
 				<CardContent className="space-y-6 p-8">
@@ -181,13 +183,13 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 
 					<div className="flex justify-center pt-6">
 						<Link href="/" className="mr-4">
-							<Button variant="outline">Tillbaka till startsidan</Button>
+							<Button variant="outline">{t("quiz.backToHome")}</Button>
 						</Link>
 						<Button
 							onClick={onRestart}
 							className="px-8 py-2 bg-arkad-gradient text-primary-foreground font-semibold rounded-lg hover:shadow-arkad-glow transition-all duration-300 font-arkad"
 						>
-							Gör testet igen
+							{t("quiz.retakeQuiz")}
 						</Button>
 					</div>
 				</CardContent>

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface QuizCardProps {
 	question: string;
@@ -21,6 +22,7 @@ export const QuizCard = ({
 	onNext,
 	canProceed,
 }: QuizCardProps) => {
+	const t = useTranslations();
 	return (
 		<Card className="w-full max-w-2xl mx-auto shadow-arkad border-0 bg-card animate-fade-in">
 			<CardContent className="p-8">
@@ -68,7 +70,7 @@ export const QuizCard = ({
 								"disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none",
 							)}
 						>
-							Nästa
+							{t("quiz.next")}
 						</Button>
 					</div>
 				</div>

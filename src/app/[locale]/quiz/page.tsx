@@ -75,9 +75,9 @@ export default function QuizPage(): JSX.Element {
 				/>
 
 				<QuizCard
-					question={quizQuestions[currentQuestion].question}
-					leftStatement={quizQuestions[currentQuestion].leftStatement}
-					rightStatement={quizQuestions[currentQuestion].rightStatement}
+					question={t(quizQuestions[currentQuestion].questionKey)}
+					leftStatement={t(quizQuestions[currentQuestion].leftStatementKey)}
+					rightStatement={t(quizQuestions[currentQuestion].rightStatementKey)}
 					selectedValue={currentAnswer}
 					onSelect={handleAnswerSelect}
 					onNext={handleNext}

@@ -25,7 +25,7 @@ export default function HomePage(): JSX.Element {
 								className="transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale"
 								size="lg"
 							>
-								Start quiz
+								{t("landing.startQuiz")}
 							</Button>
 						</Link>
 					</div>
@@ -53,7 +53,7 @@ export default function HomePage(): JSX.Element {
 			<div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
 				<div className="text-center max-w-4xl mx-auto animate-fade-in">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-						Vilka värdposter i ARKAD passar dig?
+						{t("landing.mainHeading")}
 					</h2>
 
 					<div className="space-y-6 text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -73,7 +73,7 @@ export default function HomePage(): JSX.Element {
 					<div className="mb-16 hover-scale">
 						<img
 							src="/group-photo.jpg"
-							alt="ARKAD Team Photo"
+							alt={t("landing.teamPhotoAlt")}
 							className="rounded-lg shadow-2xl max-w-full h-auto mx-auto"
 						/>
 					</div>
@@ -102,19 +102,19 @@ export default function HomePage(): JSX.Element {
 									href="#"
 									className="block text-primary hover:text-primary/80 story-link"
 								>
-									Facebook
+									{t("footer.facebook")}
 								</a>
 								<a
 									href="#"
 									className="block text-primary hover:text-primary/80 story-link"
 								>
-									Instagram
+									{t("footer.instagram")}
 								</a>
 								<a
 									href="#"
 									className="block text-primary hover:text-primary/80 story-link"
 								>
-									LinkedIn
+									{t("footer.linkedin")}
 								</a>
 							</div>
 						</div>
@@ -136,7 +136,7 @@ export default function HomePage(): JSX.Element {
 								<p>{t("footer.address1")}</p>
 								<p>{t("footer.address2")}</p>
 								<p>{t("footer.address3")}</p>
-								<p>arkad@tlth.se</p>
+								<p>{t("footer.email")}</p>
 								<p>{t("footer.phone")}</p>
 								<p>{t("footer.phoneHours")}</p>
 							</div>

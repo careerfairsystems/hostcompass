@@ -11,13 +11,13 @@ import {
 } from "./ui/select";
 import { usePathname, useRouter } from "@/i18n/navigation";
 type SupportedLocales = (typeof routing.locales)[number];
-const localeConfig: Record<SupportedLocales, { name: string; flag: string }> = {
+const localeConfig: Record<SupportedLocales, { nameKey: string; flag: string }> = {
 	en: {
-		name: "English",
+		nameKey: "locales.english",
 		flag: "🇬🇧",
 	},
 	sv: {
-		name: "Svenska",
+		nameKey: "locales.svenska",
 		flag: "🇸🇪",
 	},
 } as const;
@@ -43,7 +43,7 @@ export default function LocaleSwitcher() {
 				{selectedConfig ? (
 					<div className="flex items-center gap-2">
 						<span className="text-lg">{selectedConfig.flag}</span>
-						<span>{selectedConfig.name}</span>
+						<span>{t(selectedConfig.nameKey)}</span>
 					</div>
 				) : (
 					<SelectValue placeholder={t("forms.selectOption")} />
@@ -56,7 +56,7 @@ export default function LocaleSwitcher() {
 						<SelectItem key={locale} value={locale}>
 							<div className="flex items-center gap-2">
 								<span className="text-lg">{config.flag}</span>
-								<span>{config.name}</span>
+								<span>{t(config.nameKey)}</span>
 							</div>
 						</SelectItem>
 					);
