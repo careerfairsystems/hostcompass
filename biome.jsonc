@@ -20,6 +20,32 @@
       "assist": {
         "enabled": false
       }
+    },
+    {
+      "includes": ["**/components/quiz-results.tsx", "src/components/quiz-results.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noMagicNumbers": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/hooks/use-toast.ts", "src/hooks/use-toast.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useDefaultSwitchClause": "off"
+          },
+          "complexity": {
+            "noForEach": "off"
+          },
+          "nursery": {
+            "noShadow": "off"
+          }
+        }
+      }
     }
   ]
 }

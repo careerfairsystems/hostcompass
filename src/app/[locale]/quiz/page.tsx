@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { QuizCard } from "@/components/quiz-card";
 import { ProgressBar } from "@/components/progress-bar";
 import { QuizResults } from "@/components/quiz-results";
-import { quizQuestions } from "@/data/quizQuestions";
+import { quizQuestions } from "@/data/quiz-questions";
 
 export default function QuizPage(): JSX.Element {
 	const t = useTranslations();

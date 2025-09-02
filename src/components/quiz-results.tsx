@@ -1,4 +1,3 @@
-/* biome-ignore lint/style/noMagicNumbers: This file contains quiz scoring data with meaningful numeric patterns */
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
@@ -26,9 +25,8 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 	const t = useTranslations();
 	const currentLocale = useLocale() as SupportedLocales;
 	// Calculate personality type based on answers
-	const calculateRole = (answers: number[]): Role => {
+	const calculateRole = (userAnswers: number[]): Role => {
 		// CSV data with role answers for 4 questions: Grupper, Företagskontakt, Servicemindset, Struktur
-		/* biome-ignore lint/style/noMagicNumbers: Quiz scoring data - these numbers represent personality quiz answer patterns */
 		const roleData = [
 			{
 				name: { sv: "Eventvärd", en: "Event host" },
@@ -133,11 +131,11 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 
 		// Calculate Euclidean distance between user answers and each role
 		const calculateDistance = (
-			userAnswers: number[],
+			currentAnswers: number[],
 			roleAnswers: number[],
 		): number => {
 			return Math.sqrt(
-				userAnswers.reduce((sum, answer, index) => {
+				currentAnswers.reduce((sum, answer, index) => {
 					return sum + (answer - roleAnswers[index]) ** 2;
 				}, 0),
 			);
@@ -146,7 +144,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 		// Find the 3 closest matching roles
 		const rolesWithDistances = roleData.map((role) => ({
 			...role,
-			distance: calculateDistance(answers, role.answers),
+			distance: calculateDistance(userAnswers, role.answers),
 		}));
 
 		const sortedRoles = rolesWithDistances.sort(
@@ -175,7 +173,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 					<div className="space-y-4">
 						<div className="grid gap-4">
 							{personalityType.recommendations.map((recommendation, index) => (
-								<Card key={index} className="border-border bg-card/50">
+								<Card key={recommendation.title} className="border-border bg-card/50">
 									<CardContent className="p-4">
 										<h4 className="mb-2 font-semibold text-foreground">
 											{index + 1}. {recommendation.title}
