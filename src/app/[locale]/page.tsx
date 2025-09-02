@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
-import { Link } from "../../navigation";
+import { Link } from "../../../navigation";
 
 export default function HomePage(): JSX.Element {
 	const t = useTranslations();
@@ -21,11 +21,11 @@ export default function HomePage(): JSX.Element {
 					{/* Compass Icon and Title */}
 					<div className="mb-16">
 						<div className="relative mb-6">
-							<img src="/banner.png" alt={`${t('landing.title')} Banner`} />
+							<img src="/banner.png" alt={`${t("landing.title")} Banner`} />
 						</div>
 						<h1 className="text-6xl font-bold text-center mb-2">
 							<span className="bg-arkad-gradient bg-clip-text text-transparent">
-								{t('landing.title')}
+								{t("landing.title")}
 							</span>
 						</h1>
 					</div>
@@ -33,7 +33,7 @@ export default function HomePage(): JSX.Element {
 					{/* Language Selection */}
 					<div className="mb-16">
 						<h2 className="text-2xl font-medium text-foreground mb-8">
-							{t('landing.languagePrompt')}
+							{t("landing.languagePrompt")}
 						</h2>
 
 						<LocaleSwitcher />
@@ -62,19 +62,19 @@ export default function HomePage(): JSX.Element {
 			<div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
 				<div className="text-center max-w-4xl mx-auto animate-fade-in">
 					<h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-						{t('landing.mainHeading')}
+						{t("landing.mainHeading")}
 					</h2>
 
 					<div className="space-y-6 text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-						<p>{t('landing.description1')}</p>
-						<p>{t('landing.description2')}</p>
-						<p>{t('landing.description3')}</p>
-						<p className="font-medium">{t('landing.description4')}</p>
+						<p>{t("landing.description1")}</p>
+						<p>{t("landing.description2")}</p>
+						<p>{t("landing.description3")}</p>
+						<p className="font-medium">{t("landing.description4")}</p>
 					</div>
 
 					<Link href="/quiz">
 						<Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-xl font-medium rounded-full mb-16 transition-all duration-300 shadow-arkad-shadow hover:shadow-arkad-glow hover-scale">
-							{t('landing.readMore')}
+							{t("landing.readMore")}
 						</Button>
 					</Link>
 
@@ -93,18 +93,18 @@ export default function HomePage(): JSX.Element {
 					<div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
 						<div>
 							<h3 className="text-primary font-semibold mb-4">
-								{t('footer.when')}
+								{t("footer.when")}
 							</h3>
 							<div className="space-y-2 text-muted-foreground">
-								<p>{t('footer.dates')}</p>
-								<p>{t('footer.tuesday')}</p>
-								<p>{t('footer.wednesday')}</p>
+								<p>{t("footer.dates")}</p>
+								<p>{t("footer.tuesday")}</p>
+								<p>{t("footer.wednesday")}</p>
 							</div>
 						</div>
 
 						<div>
 							<h3 className="text-primary font-semibold mb-4">
-								{t('footer.social')}
+								{t("footer.social")}
 							</h3>
 							<div className="space-y-2">
 								<a
@@ -130,24 +130,24 @@ export default function HomePage(): JSX.Element {
 
 						<div>
 							<h3 className="text-primary font-semibold mb-4">
-								{t('footer.app')}
+								{t("footer.app")}
 							</h3>
 							<div className="space-y-2 text-muted-foreground">
-								<p>{t('footer.contact')}</p>
+								<p>{t("footer.contact")}</p>
 							</div>
 						</div>
 
 						<div>
 							<h3 className="text-primary font-semibold mb-4">
-								{t('footer.fairTitle')}
+								{t("footer.fairTitle")}
 							</h3>
 							<div className="space-y-2 text-muted-foreground">
-								<p>{t('footer.address1')}</p>
-								<p>{t('footer.address2')}</p>
-								<p>{t('footer.address3')}</p>
+								<p>{t("footer.address1")}</p>
+								<p>{t("footer.address2")}</p>
+								<p>{t("footer.address3")}</p>
 								<p>arkad@tlth.se</p>
-								<p>{t('footer.phone')}</p>
-								<p>{t('footer.phoneHours')}</p>
+								<p>{t("footer.phone")}</p>
+								<p>{t("footer.phoneHours")}</p>
 							</div>
 						</div>
 					</div>
