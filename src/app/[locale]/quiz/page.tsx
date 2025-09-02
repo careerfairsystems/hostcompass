@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { QuizCard } from "@/components/QuizCard";
-import { ProgressBar } from "@/components/ProgressBar";
-import { QuizResults } from "@/components/QuizResults";
+import { QuizCard } from "@/components/quiz-card";
+import { ProgressBar } from "@/components/progress-bar";
+import { QuizResults } from "@/components/quiz-results";
 import { quizQuestions } from "@/data/quizQuestions";
 
 export default function QuizPage(): JSX.Element {
@@ -19,7 +19,7 @@ export default function QuizPage(): JSX.Element {
 	};
 
 	const handleNext = (): void => {
-		if (currentAnswer === null) return;
+		if (currentAnswer === null) { return; }
 
 		const newAnswers = [...answers, currentAnswer];
 		setAnswers(newAnswers);
@@ -41,13 +41,13 @@ export default function QuizPage(): JSX.Element {
 
 	if (showResults) {
 		return (
-			<div className="min-h-screen bg-arkad-gradient-subtle py-12 px-4">
+			<div className="min-h-screen bg-arkad-gradient-subtle px-4 py-12">
 				<div className="container mx-auto">
-					<div className="text-center mb-8">
-						<div className="font-arkad-condensed text-2xl font-bold text-foreground tracking-wider mb-2">
+					<div className="mb-8 text-center">
+						<div className="mb-2 font-arkad-condensed font-bold text-2xl text-foreground tracking-wider">
 							ARKAD
 						</div>
-						<h1 className="text-4xl font-bold text-center bg-arkad-gradient bg-clip-text text-transparent">
+						<h1 className="bg-arkad-gradient bg-clip-text text-center font-bold text-4xl text-transparent">
 							{t("quiz.results")}
 						</h1>
 					</div>
@@ -58,13 +58,13 @@ export default function QuizPage(): JSX.Element {
 	}
 
 	return (
-		<div className="min-h-screen bg-arkad-gradient-subtle py-12 px-4">
+		<div className="min-h-screen bg-arkad-gradient-subtle px-4 py-12">
 			<div className="container mx-auto">
-				<div className="text-center mb-8">
-					<div className="font-arkad-condensed text-2xl font-bold text-foreground tracking-wider mb-2">
+				<div className="mb-8 text-center">
+					<div className="mb-2 font-arkad-condensed font-bold text-2xl text-foreground tracking-wider">
 						ARKAD
 					</div>
-					<h1 className="text-4xl font-bold text-center bg-arkad-gradient bg-clip-text text-transparent">
+					<h1 className="bg-arkad-gradient bg-clip-text text-center font-bold text-4xl text-transparent">
 						{t("quiz.title")}
 					</h1>
 				</div>

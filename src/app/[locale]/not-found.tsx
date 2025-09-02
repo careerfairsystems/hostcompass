@@ -4,21 +4,21 @@ import { useTranslations } from "next-intl";
 import { Link } from "../../../navigation";
 
 export default function NotFound(): JSX.Element {
-	const t = useTranslations();
+	const _t = useTranslations();
 
 	return (
-		<div className="min-h-screen bg-arkad-gradient-subtle flex items-center justify-center px-4">
+		<div className="flex min-h-screen items-center justify-center bg-arkad-gradient-subtle px-4">
 			<div className="text-center">
-				<div className="font-arkad-condensed text-2xl font-bold text-foreground tracking-wider mb-4">
+				<div className="mb-4 font-arkad-condensed font-bold text-2xl text-foreground tracking-wider">
 					ARKAD
 				</div>
-				<h1 className="text-4xl font-bold text-center bg-arkad-gradient bg-clip-text text-transparent mb-4">
+				<h1 className="mb-4 bg-arkad-gradient bg-clip-text text-center font-bold text-4xl text-transparent">
 					404
 				</h1>
-				<p className="text-lg text-muted-foreground mb-8">Page not found</p>
+				<p className="mb-8 text-lg text-muted-foreground">Page not found</p>
 				<Link
 					href="/"
-					className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-full transition-all duration-300"
+					className="rounded-full bg-primary px-6 py-3 text-primary-foreground transition-all duration-300 hover:bg-primary/90"
 				>
 					Go Home
 				</Link>

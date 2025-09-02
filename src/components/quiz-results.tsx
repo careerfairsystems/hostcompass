@@ -1,15 +1,15 @@
+/* biome-ignore lint/style/noMagicNumbers: This file contains quiz scoring data with meaningful numeric patterns */
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { routing } from "@/i18n/routing";
+import type { routing } from "@/i18n/routing";
 
 type SupportedLocales = (typeof routing.locales)[number];
-interface QuizResultsProps {
+type QuizResultsProps = {
 	answers: number[];
 	onRestart: () => void;
-}
+};
 
 type Role = {
 	name: {
@@ -28,6 +28,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 	// Calculate personality type based on answers
 	const calculateRole = (answers: number[]): Role => {
 		// CSV data with role answers for 4 questions: Grupper, Företagskontakt, Servicemindset, Struktur
+		/* biome-ignore lint/style/noMagicNumbers: Quiz scoring data - these numbers represent personality quiz answer patterns */
 		const roleData = [
 			{
 				name: { sv: "Eventvärd", en: "Event host" },
@@ -137,7 +138,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 		): number => {
 			return Math.sqrt(
 				userAnswers.reduce((sum, answer, index) => {
-					return sum + Math.pow(answer - roleAnswers[index], 2);
+					return sum + (answer - roleAnswers[index]) ** 2;
 				}, 0),
 			);
 		};
@@ -155,7 +156,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 
 		return {
 			name: { sv: "Dina Bästa Matchningar", en: "Your Best Matches" },
-			recommendations: top3Roles.map((role, index) => ({
+			recommendations: top3Roles.map((role, _index) => ({
 				title: role.name[currentLocale],
 				description: role.description[currentLocale],
 			})),
@@ -163,10 +164,10 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 	};
 	const personalityType = calculateRole(answers);
 	return (
-		<div className="w-full max-w-2xl mx-auto animate-fade-in">
-			<Card className="shadow-arkad border-0 bg-card">
-				<CardHeader className="text-center pb-4">
-					<CardTitle className="text-3xl font-bold bg-arkad-gradient bg-clip-text text-transparent font-arkad">
+		<div className="mx-auto w-full max-w-2xl animate-fade-in">
+			<Card className="border-0 bg-card shadow-arkad">
+				<CardHeader className="pb-4 text-center">
+					<CardTitle className="bg-arkad-gradient bg-clip-text font-arkad font-bold text-3xl text-transparent">
 						{t("quiz.topRecommendations")}
 					</CardTitle>
 				</CardHeader>
@@ -174,12 +175,12 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 					<div className="space-y-4">
 						<div className="grid gap-4">
 							{personalityType.recommendations.map((recommendation, index) => (
-								<Card key={index} className="bg-card/50 border-border">
+								<Card key={index} className="border-border bg-card/50">
 									<CardContent className="p-4">
-										<h4 className="font-semibold text-foreground mb-2">
+										<h4 className="mb-2 font-semibold text-foreground">
 											{index + 1}. {recommendation.title}
 										</h4>
-										<p className="text-sm text-muted-foreground">
+										<p className="text-muted-foreground text-sm">
 											{recommendation.description}
 										</p>
 									</CardContent>
@@ -215,7 +216,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
 						</Link>
 						<Button
 							onClick={onRestart}
-							className="px-8 py-2 bg-arkad-gradient text-primary-foreground font-semibold rounded-lg hover:shadow-arkad-glow transition-all duration-300 font-arkad"
+							className="rounded-lg bg-arkad-gradient px-8 py-2 font-arkad font-semibold text-primary-foreground transition-all duration-300 hover:shadow-arkad-glow"
 						>
 							{t("quiz.retakeQuiz")}
 						</Button>

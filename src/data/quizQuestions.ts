@@ -1,9 +1,9 @@
-export interface QuizQuestion {
+export type QuizQuestion = {
 	id: number;
 	questionKey: string;
 	leftStatementKey: string;
 	rightStatementKey: string;
-}
+};
 
 export const quizQuestions: QuizQuestion[] = [
 	{
