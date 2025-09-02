@@ -9,30 +9,18 @@ export default function HomePage(): JSX.Element {
 	const t = useTranslations();
 
 	return (
-		<div className="min-h-screen bg-arkad-gradient-subtle">
+		<div className="min-h-screen">
 			{/* Hero Section */}
 			<div className="min-h-screen flex flex-col items-center justify-center px-4">
 				<div className="text-center max-w-2xl mx-auto animate-fade-in">
-					{/* ARKAD Logo */}
-					<div className="font-arkad-condensed text-2xl font-bold text-foreground tracking-wider mb-12">
-						ARKAD
-					</div>
-
 					{/* Compass Icon and Title */}
-					<div className="mb-16">
-						<div className="relative mb-6">
-							<img src="/banner.png" alt={`${t("landing.title")} Banner`} />
-						</div>
-						<h1 className="text-6xl font-bold text-center mb-2">
-							<span className="bg-arkad-gradient bg-clip-text text-transparent">
-								{t("landing.title")}
-							</span>
-						</h1>
+					<div className="relative mb-8">
+						<img src="/banner.png" alt={`${t("landing.title")} Banner`} />
 					</div>
 
 					{/* Language Selection */}
 					<div className="mb-16">
-						<h2 className="text-2xl font-medium text-foreground mb-8">
+						<h2 className="text-5xl font-bold text-center mb-2">
 							{t("landing.languagePrompt")}
 						</h2>
 

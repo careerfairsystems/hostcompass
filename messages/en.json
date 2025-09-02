@@ -1,46 +1,46 @@
 {
-  "index": {
-    "title": "ARKAD - Personality Test",
-    "description": "Discover your personality type with ARKAD's personality test"
-  },
-  "navigation": {
-    "home": "Home",
-    "quiz": "Quiz",
-    "about": "About"
-  },
-  "landing": {
-    "title": "Healthcare Compass",
-    "languagePrompt": "Please select your preferred language",
-    "swedish": "Swedish",
-    "english": "English",
-    "mainHeading": "Which healthcare positions at ARKAD suit you?",
-    "description1": "With the healthcare compass, ARKAD hopes to help you find something that fits you perfectly!",
-    "description2": "Follow the steps above and get 3 positions that could be perfect for you.",
-    "description3": "Recruitment is ongoing between September 16 and October 6.",
-    "description4": "Read more about all positions and recruitment here:",
-    "readMore": "READ MORE"
-  },
-  "quiz": {
-    "title": "Personality Test",
-    "question": "Question {number} of {total}",
-    "next": "Next",
-    "previous": "Previous",
-    "submit": "Submit",
-    "results": "Your Result"
-  },
-  "footer": {
-    "when": "When is the fair?",
-    "dates": "11-12 November 2025",
-    "tuesday": "Tuesday: 10:00 - 16:00",
-    "wednesday": "Wednesday: 10:00 - 15:00",
-    "social": "Follow us on social media",
-    "app": "Get the ARKAD app",
-    "contact": "Contact us at business.arkad@tlth.se",
-    "fairTitle": "ARKAD Career Fair",
-    "address1": "Student Union of Faculty of Engineering, Lund University",
-    "address2": "John Ericssons Väg 3",
-    "address3": "223 63, Lund",
-    "phone": "+46 (0)704 18 79 27",
-    "phoneHours": "Available phone hours 10-16"
-  }
+	"index": {
+		"title": "ARKAD - Personality Test",
+		"description": "Discover your personality type with ARKAD's personality test"
+	},
+	"navigation": {
+		"home": "Home",
+		"quiz": "Quiz",
+		"about": "About"
+	},
+	"landing": {
+		"title": "Healthcare Compass",
+		"languagePrompt": "Please select your preferred language",
+		"swedish": "Swedish",
+		"english": "English",
+		"mainHeading": "Which healthcare positions at ARKAD suit you?",
+		"description1": "With the healthcare compass, ARKAD hopes to help you find something that fits you perfectly!",
+		"description2": "Follow the steps above and get 3 positions that could be perfect for you.",
+		"description3": "Recruitment is ongoing between September 16 and October 6.",
+		"description4": "Read more about all positions and recruitment here:",
+		"readMore": "READ MORE"
+	},
+	"quiz": {
+		"title": "Host compass",
+		"question": "Question {number} of {total}",
+		"next": "Next",
+		"previous": "Previous",
+		"submit": "Submit",
+		"results": "Your Result"
+	},
+	"footer": {
+		"when": "When is the fair?",
+		"dates": "11-12 November 2025",
+		"tuesday": "Tuesday: 10:00 - 16:00",
+		"wednesday": "Wednesday: 10:00 - 15:00",
+		"social": "Follow us on social media",
+		"app": "Get the ARKAD app",
+		"contact": "Contact us at business.arkad@tlth.se",
+		"fairTitle": "ARKAD Career Fair",
+		"address1": "Student Union of Faculty of Engineering, Lund University",
+		"address2": "John Ericssons Väg 3",
+		"address3": "223 63, Lund",
+		"phone": "+46 (0)704 18 79 27",
+		"phoneHours": "Available phone hours 10-16"
+	}
 }
