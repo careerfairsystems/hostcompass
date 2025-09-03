@@ -1,82 +1,83 @@
 {
-	"index": {
-		"title": "ARKAD - Host Compass",
-		"description": "Find your host position with ARKAD's host compass"
-	},
-	"navigation": {
-		"home": "Home",
-		"quiz": "Quiz",
-		"about": "About us"
-	},
-	"landing": {
-		"title": "Host Compass",
-		"languagePrompt": "Choose your language",
-		"swedish": "Svenska",
-		"english": "English",
-		"mainHeading": "Which host positions in ARKAD suit you?",
-		"description1": "With the host compass, ARKAD hopes to help you find something that suits you perfectly!",
-		"description2": "Follow the steps above and get 3 positions that could be perfect for you.",
-		"description3": "Recruitment is ongoing between September 16 and October 6.",
-		"description4": "Read more about all positions and recruitment here:",
-		"readMore": "READ MORE",
-		"startQuiz": "Start quiz",
-		"teamPhotoAlt": "ARKAD Team Photo"
-	},
-	"quiz": {
-		"title": "Host Compass",
-		"question": "Question {number} of {total}",
-		"next": "Next",
-		"previous": "Previous",
-		"submit": "Submit",
-		"results": "Your Result",
-		"step": "Step {currentStep} of {totalSteps}",
-		"topRecommendations": "Top 3 recommendations for you:",
-		"backToHome": "Back to homepage",
-		"retakeQuiz": "Take the quiz again"
-	},
-	"footer": {
-		"when": "When is the fair?",
-		"dates": "11-12 November 2025",
-		"tuesday": "Tuesday: 10:00 - 16:00",
-		"wednesday": "Wednesday: 10:00 - 15:00",
-		"social": "Follow us on social media",
-		"app": "Download the ARKAD app",
-		"contact": "Contact us at business.arkad@tlth.se",
-		"fairTitle": "ARKAD Career Fair",
-		"address1": "Student Union at Lund University",
-		"address2": "John Ericssons Väg 3",
-		"address3": "223 63, Lund",
-		"phone": "+46 (0)704 18 79 27",
-		"phoneHours": "Available phone hours 10-16",
-		"facebook": "Facebook",
-		"instagram": "Instagram",
-		"linkedin": "LinkedIn",
-		"email": "arkad@tlth.se"
-	},
-	"questions": {
-		"groups": {
-			"title": "Groups",
-			"left": "I like working in small groups",
-			"right": "I like working in large groups"
-		},
-		"companyContact": {
-			"title": "Company contact",
-			"left": "I'm not interested in having contact with companies",
-			"right": "I'm interested in having contact with companies"
-		},
-		"serviceMindset": {
-			"title": "Service mindset",
-			"left": "I prefer not having to be service minded",
-			"right": "I love being service minded"
-		},
-		"structure": {
-			"title": "Structure",
-			"left": "I find it comfortable when someone tells me what to do",
-			"right": "I like taking initiative"
-		}
-	},
-	"locales": {
-		"english": "English",
-		"svenska": "Svenska"
-	}
+  "index": {
+    "title": "ARKAD - Host Compass",
+    "description": "Find your host position with ARKAD's host compass"
+  },
+  "navigation": {
+    "home": "Home",
+    "quiz": "Quiz",
+    "about": "About us"
+  },
+  "landing": {
+    "title": "Host Compass",
+    "languagePrompt": "Choose your language",
+    "swedish": "Svenska",
+    "english": "English",
+    "mainHeading": "Which host positions in ARKAD suit you?",
+    "description1": "With the host compass, ARKAD hopes to help you find something that suits you perfectly!",
+    "description2": "Follow the steps above and get 3 positions that could be perfect for you.",
+    "description3": "Recruitment is ongoing between September 16 and October 6.",
+    "description4": "Read more about all positions and recruitment here:",
+    "readMore": "READ MORE",
+    "startQuiz": "Start quiz",
+    "teamPhotoAlt": "ARKAD Team Photo"
+  },
+  "quiz": {
+    "apply": "Apply",
+    "title": "Host Compass",
+    "question": "Question {number} of {total}",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "results": "Your Result",
+    "step": "Step {currentStep} of {totalSteps}",
+    "topRecommendations": "Top 3 recommendations for you:",
+    "backToHome": "Back to homepage",
+    "retakeQuiz": "Take the quiz again"
+  },
+  "footer": {
+    "when": "When is the fair?",
+    "dates": "11-12 November 2025",
+    "tuesday": "Tuesday: 10:00 - 16:00",
+    "wednesday": "Wednesday: 10:00 - 15:00",
+    "social": "Follow us on social media",
+    "app": "Download the ARKAD app",
+    "contact": "Contact us at business.arkad@tlth.se",
+    "fairTitle": "ARKAD Career Fair",
+    "address1": "Student Union at Lund University",
+    "address2": "John Ericssons Väg 3",
+    "address3": "223 63, Lund",
+    "phone": "+46 (0)704 18 79 27",
+    "phoneHours": "Available phone hours 10-16",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "email": "arkad@tlth.se"
+  },
+  "questions": {
+    "groups": {
+      "title": "Groups",
+      "left": "I like working in small groups",
+      "right": "I like working in large groups"
+    },
+    "companyContact": {
+      "title": "Company contact",
+      "left": "I'm not interested in having contact with companies",
+      "right": "I'm interested in having contact with companies"
+    },
+    "serviceMindset": {
+      "title": "Service mindset",
+      "left": "I prefer not having to be service minded",
+      "right": "I love being service minded"
+    },
+    "structure": {
+      "title": "Structure",
+      "left": "I find it comfortable when someone tells me what to do",
+      "right": "I like taking initiative"
+    }
+  },
+  "locales": {
+    "english": "English",
+    "svenska": "Svenska"
+  }
 }

@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
-const RATING_MIN = 1;
-const RATING_MAX = 5;
-const RATING_SCALE_VALUES = Array.from({ length: RATING_MAX - RATING_MIN + 1 }, (_, i) => RATING_MIN + i) as const;
+const _RATING_MIN = 1;
+const _RATING_MAX = 5;
+const RATING_SCALE_VALUES = [1, 2, 3, 4, 5] as const;
 
 type QuizCardProps = {
 	question: string;
