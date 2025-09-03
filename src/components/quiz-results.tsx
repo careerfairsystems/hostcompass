@@ -46,6 +46,8 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
       "Power Supply & Network Host": "Power Supply & Network",
       "Wardrobe host": "Wardrobe",
       "Garderobsvärd": "Wardrobe",
+      "Internal Event": "Internal Event",
+      "Intressegrupp Intern Event": "Internal Event",
     };
 
     // Get the top 3 role recommendations
@@ -170,6 +172,17 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
         description: {
           sv: "Som Power Supply & Network Host kommer du att vara en del i arbetet med allt som rör el och nätverk under mässan. Du kommer inför mässan vara delaktig i planeringen kring hur all el och nätverk skall förläggas.",
           en: "As a Power Supply & Network Host, you will be part of the work with everything related to electricity and networks during the fair. Before the fair, you will be involved in planning how all electricity and networks should be deployed.",
+        },
+      },
+      {
+        name: {
+          sv: "Intressegrupp Intern Event",
+          en: "Internal Event",
+        },
+        answers: [5, 1, 4, 3],
+        description: {
+          sv: "Som Intressegrupp Intern Event kommer du att planera och hålla i interna event för ARKAD-teamet. Du får arbeta med att skapa sammanhållning och bygga gemenskap inom organisationen genom att organisera aktiviteter och träffar för funktionärer.",
+          en: "As Internal Event host, you will plan and organize internal events for the ARKAD team. You get to work on creating cohesion and building community within the organization by organizing activities and meetings for officials.",
         },
       },
     ];

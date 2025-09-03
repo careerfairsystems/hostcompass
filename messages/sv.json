@@ -23,6 +23,7 @@
     "teamPhotoAlt": "ARKAD Team Foto"
   },
   "quiz": {
+    "apply": "Sök",
     "title": "Värdkompassen",
     "question": "Fråga {number} av {total}",
     "next": "Nästa",
