@@ -28,31 +28,31 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
     // Mapping between quiz role names and ARKAD form option values
     const roleMapping: Record<string, string> = {
       "Event host": "Event",
-      "Eventvärd": "Event",
+      Eventvärd: "Event",
       "Banquet host": "Banquet",
       "Bankett värd": "Banquet",
       "Company host": "Company",
-      "Interior Design Host": "Decoration",
-      "Interior": "Decoration",
+      "Decoration Host": "Decoration",
       "Info Desk Host": "Info desk",
       "Logistics host": "Logistics",
-      "Logistikvärd": "Logistics",
+      Logistikvärd: "Logistics",
       "Lounge host": "Lounge",
-      "Loungevärd": "Lounge",
+      Loungevärd: "Lounge",
       "Lunch host": "Lunch",
-      "Lunchvärd": "Lunch",
-      "Media host": "Photo & Film",
-      "Mediavärd": "Photo & Film",
+      Lunchvärd: "Lunch",
+      "Photo & Film host": "Photo & Film",
+      Photo & Filmvärd: "Photo & Film",
       "Power Supply & Network Host": "Power Supply & Network",
       "Wardrobe host": "Wardrobe",
-      "Garderobsvärd": "Wardrobe",
+      Garderobsvärd: "Wardrobe",
       "Internal Event": "Internal Event",
       "Intressegrupp Intern Event": "Internal Event",
+      "Student Sessions Host": "Student Sessions",
     };
 
     // Get the top 3 role recommendations
     const top3Roles = personalityType.recommendations.slice(0, 3);
-    
+
     // Map role titles to form values
     const mappedRoles = top3Roles
       .map((role) => roleMapping[role.title])
@@ -61,13 +61,19 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
     // Build the URL with query parameters
     const baseUrl = "https://www.arkadtlth.se/apply#form";
     const params = new URLSearchParams();
-    
-    if (mappedRoles[0]) { params.set("first-host", mappedRoles[0]); }
-    if (mappedRoles[1]) { params.set("second-host", mappedRoles[1]); }
-    if (mappedRoles[2]) { params.set("third-host", mappedRoles[2]); }
-    
+
+    if (mappedRoles[0]) {
+      params.set("first-host", mappedRoles[0]);
+    }
+    if (mappedRoles[1]) {
+      params.set("second-host", mappedRoles[1]);
+    }
+    if (mappedRoles[2]) {
+      params.set("third-host", mappedRoles[2]);
+    }
+
     const finalUrl = `${baseUrl}?${params.toString()}`;
-    
+
     // Redirect to the ARKAD application form
     window.open(finalUrl, "_blank");
   };
@@ -79,88 +85,80 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
         name: { sv: "Eventvärd", en: "Event host" },
         answers: [2, 4, 4, 2],
         description: {
-          sv: "Som Eventvärd kommer du tillsammans med dina medvärdar leverera event veckan innan och under ARKAD. Du kommer bland annat förbereda lokalerna inför eventen, välkomna gäster och se till att både företag och besökare blir nöjda med eventet. Denna roll passar dig som är serviceminded och som vill ha kontakt med företagen såväl som besökarna!",
-          en: "As an Event Host, you will work together with your fellow hosts to deliver events the week before and during ARKAD. You will prepare venues for events, welcome guests, and ensure that both companies and visitors are satisfied with the event. This role suits you if you are service-minded and want to have contact with both companies and visitors!",
+          sv: "Som Event Host hjälper du till att arrangera och genomföra företagseventen runt ARKAD.",
+          en: "As an Event Host, you help organize and deliver company events during ARKAD.",
         },
       },
       {
-        name: { sv: "Mediavärd", en: "Media host" },
+        name: { sv: "Photo & Filmvärd", en: "Photo & Film host" },
         answers: [1, 4, 1, 4],
         description: {
-          sv: "Som mediavärd kommer du främst att vara delaktig i att dokumentera ARKADs mässa och bankett. Rollen passar dig som har ett intresse för foto och/eller film, som gillar att mingla bland företag och studenter och som tycker om självständigt arbete där du får utrymme att ta egna kreativa initiativ.",
-          en: "As a Media Host, you will primarily be involved in documenting ARKAD's fair and banquet. This role suits you if you have an interest in photography and/or film, enjoy mingling among companies and students, and like independent work where you have room for your own creative initiatives.",
+          sv: "Som Photo & Film Host fångar du ARKADs stämning och höjdpunkter genom foto och film.",
+          en: "As a Photo & Film Host, you capture ARKAD's atmosphere and highlights through photography and film.",
         },
       },
       {
-        name: { sv: "Interior Design Värd", en: "Interior Design Host" },
+        name: { sv: "Decoration Värd", en: "Decoration Host" },
         answers: [3, 1, 1, 3],
         description: {
-          sv: "Är du intresserad av att dekorera och tycker det är kul med inredningsdesign? Som Interior Design Värd har du i uppgift att hjälpa till att få mässan att vara estetiskt tilltalande samtidigt som den ger ett professionellt intryck.",
-          en: "Are you interested in decorating and think interior design is fun? As an Interior Design Host, your task is to help make the fair aesthetically appealing while giving a professional impression.",
+          sv: "Som Decoration Host ansvarar du för att skapa en välkomnande och inspirerande miljö runt mässan.",
+          en: "As a Decoration Host, you help create a welcoming and inspiring environment for the fair.",
         },
       },
       {
         name: { sv: "Logistikvärd", en: "Logistics host" },
         answers: [3, 3, 5, 3],
         description: {
-          sv: "Som logistikvärd kommer du tillsammans med logistikgruppen se till att allt funkar som det ska under mässdagarna. Ni står för samordning, organisation och transport av företagens gods och kommer hjälpa till att ställa i ordning allt på mässområdet.",
-          en: "As a Logistics Host, you will work together with the logistics team to ensure everything functions as it should during the fair days. You are responsible for coordination, organization, and transportation of companies' goods and will help set up everything at the fair area.",
+          sv: "Som Logistics Host hjälper du till med transport, samordning och logistik för företagens material.",
+          en: "As a Logistics Host, you assist with transport, coordination, and logistics for the companies' materials.",
         },
       },
       {
         name: { sv: "Garderobsvärd", en: "Wardrobe host" },
         answers: [1, 4, 5, 2],
         description: {
-          sv: "Som garderobsvärd håller du, tillsammans med andra garderobsvärdar, koll på en av våra garderober där företagsrepresentanter kan lämna och hämta sina ytterkläder. Din huvudsakliga uppgift är hantering av garderobsbiljetter.",
-          en: "As a Wardrobe Host, you will, together with other wardrobe hosts, keep track of one of our wardrobes where company representatives can leave and pick up their outerwear. Your main task is handling wardrobe tickets.",
+          sv: "Som Wardrobe Host välkomnar du företag och hanterar garderoben under mässan.",
+          en: "As a Wardrobe Host, you welcome companies and manage the wardrobe during the fair.",
         },
       },
       {
         name: { sv: "Info Desk Värd", en: "Info Desk Host" },
         answers: [2, 3, 5, 3],
         description: {
-          sv: "Är du hjälpsam och har lätt att hålla koll på information? Som Info Desk Host står du i en av informationsdiskarna i entrén till våra mässlokaler. Din främsta uppgift är att se till så företagsrepresentanter och studenter får svar på alla frågor som uppstår.",
-          en: "Are you helpful and good at keeping track of information? As an Info Desk Host, you will stand at one of the information desks in the entrance to our fair venues. Your main task is to ensure that company representatives and students get answers to all questions that arise.",
+          sv: "Som Info Desk Host bemannar du infodisken och hjälper studenter och företag med deras frågor.",
+          en: "As an Info Desk Host, you staff the information desk and assist students and companies with their questions.",
         },
       },
       {
         name: { sv: "Bankett värd", en: "Banquet host" },
         answers: [5, 1, 2, 1],
         description: {
-          sv: "Som Bankett värd kommer du hjälpa till med att vika servetter, fixa och dekorera lokalen inför sittningen under bankettdagen och sen hjälpa till att städa efter hela mässan är över.",
-          en: "As a Banquet Host, you will help fold napkins, fix and decorate the venue for the dinner during the banquet day, and then help clean up after the entire fair is over.",
-        },
-      },
-      {
-        name: { sv: "Interior", en: "Interior" },
-        answers: [2, 1, 1, 3],
-        description: {
-          sv: "Gillar du inredningsdesign och att dekorera? Sök Interior Host! Som Interior Host hjälper du dina koordinatorer med att dekorera självaste mässan.",
-          en: "Do you like interior design and decorating? Apply for Interior Host! As an Interior Host, you help your coordinators decorate the fair itself.",
+          sv: "Som Banquet Host hjälper du till att planera, förbereda och genomföra ARKADs stora bankett.",
+          en: "As a Banquet Host, you help plan, prepare, and execute ARKAD's grand banquet.",
         },
       },
       {
         name: { sv: "Lunchvärd", en: "Lunch host" },
         answers: [5, 3, 5, 2],
         description: {
-          sv: "Som lunchvärd kommer du att välkomna och servera lunch till företagsrepresentanter och funktionärer. Ditt ansvar är att möta lungästerna i dörren, lägga upp mat på tallrikar, packa take-away lådor och hålla ordning i matsalen.",
-          en: "As a Lunch Host, you will welcome and serve lunch to company representatives and officials. Your responsibility is to meet lunch guests at the door, plate food, pack take-away boxes, and maintain order in the dining room.",
+          sv: "Som Lunch Host tar du hand om lunchområdet och ser till att gästerna får en trevlig upplevelse.",
+          en: "As a Lunch Host, you take care of the lunch area and make sure guests have a pleasant experience.",
         },
       },
       {
         name: { sv: "Loungevärd", en: "Lounge host" },
         answers: [4, 4, 5, 3],
         description: {
-          sv: "Gillar du att arbeta med människor och skapa en trevlig och välkomnande atmosfär? Att vara Lounge Värd innebär att du kommer att ta hand om loungerna som är tillgängliga för utställarna och de engagerade studenterna.",
-          en: "Do you like working with people and creating a pleasant and welcoming atmosphere? Being a Lounge Host means you will take care of the lounges available to exhibitors and engaged students.",
+          sv: "Som Lounge Host ser du till att loungerna hålls trevliga och välfyllda under mässan.",
+          en: "As a Lounge Host, you ensure the lounges stay welcoming and stocked during the fair.",
         },
       },
       {
         name: { sv: "Company host", en: "Company host" },
         answers: [1, 5, 5, 3],
         description: {
-          sv: "Som Company Host kommer du att bli tilldelad två företag som du kommer att assistera inför och under mässan. Din huvudsakliga uppgift är att hjälpa företaget och vara dess informationskälla.",
-          en: "As a Company Host, you will be assigned two companies that you will assist before and during the fair. Your main task is to help the company and be their source of information.",
+          sv: "Som Company Host är du företagens kontaktperson och ser till att deras upplevelse av ARKAD blir så bra som möjligt.",
+          en: "As a Company Host, you act as the companies' main contact and ensure they have the best possible experience at ARKAD.",
         },
       },
       {
@@ -170,8 +168,8 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
         },
         answers: [3, 1, 2, 4],
         description: {
-          sv: "Som Power Supply & Network Host kommer du att vara en del i arbetet med allt som rör el och nätverk under mässan. Du kommer inför mässan vara delaktig i planeringen kring hur all el och nätverk skall förläggas.",
-          en: "As a Power Supply & Network Host, you will be part of the work with everything related to electricity and networks during the fair. Before the fair, you will be involved in planning how all electricity and networks should be deployed.",
+          sv: "Som Power Supply & Network Host ansvarar du för el och nätverk före, under och efter mässan.",
+          en: "As a Power Supply & Network Host, you help set up, manage, and restore electricity and networks for the fair.",
         },
       },
       {
@@ -181,8 +179,16 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
         },
         answers: [5, 1, 4, 3],
         description: {
-          sv: "Som Intressegrupp Intern Event kommer du att planera och hålla i interna event för ARKAD-teamet. Du får arbeta med att skapa sammanhållning och bygga gemenskap inom organisationen genom att organisera aktiviteter och träffar för funktionärer.",
-          en: "As Internal Event host, you will plan and organize internal events for the ARKAD team. You get to work on creating cohesion and building community within the organization by organizing activities and meetings for officials.",
+          sv: "Som Internal Event Host arrangerar du tackevent för alla som arbetar med ARKAD.",
+          en: "As an Internal Event Host, you organize thank-you events for everyone working with ARKAD.",
+        },
+      },
+      {
+        name: { sv: "Student Sessions Host", en: "Student Sessions Host" },
+        answers: [3, 4, 5, 3],
+        description: {
+          sv: "Som Student Sessions Host förbereder du rum och stöttar både studenter och företag under kontaktsamtalen.",
+          en: "As a Student Sessions Host, you prepare the rooms and support both students and companies during the sessions.",
         },
       },
     ];
