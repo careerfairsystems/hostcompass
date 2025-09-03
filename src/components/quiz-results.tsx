@@ -41,7 +41,7 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
       "Lunch host": "Lunch",
       Lunchvärd: "Lunch",
       "Photo & Film host": "Photo & Film",
-      Photo & Filmvärd: "Photo & Film",
+      "Photo & Filmvärd": "Photo & Film",
       "Power Supply & Network Host": "Power Supply & Network",
       "Wardrobe host": "Wardrobe",
       Garderobsvärd: "Wardrobe",
