@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
 import type { routing } from "@/i18n/routing";
+import * as Sentry from "@sentry/nextjs";
 
 type SupportedLocales = (typeof routing.locales)[number];
 type QuizResultsProps = {
@@ -73,6 +75,31 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
     }
 
     const finalUrl = `${baseUrl}?${params.toString()}`;
+
+    // Track apply button click in Sentry
+    const applyData = {
+      recommendedRoles: top3Roles.map((role) => role.title),
+      mappedFormRoles: mappedRoles,
+      finalUrl,
+      locale: currentLocale,
+      timestamp: new Date().toISOString()
+    };
+    
+    Sentry.addBreadcrumb({
+      category: 'quiz',
+      message: 'Apply button clicked',
+      level: 'info',
+      data: applyData
+    });
+    
+    Sentry.captureMessage('Quiz apply button clicked', {
+      level: 'info',
+      tags: {
+        event_type: 'quiz_apply',
+        locale: currentLocale
+      },
+      extra: applyData
+    });
 
     // Redirect to the ARKAD application form
     window.open(finalUrl, "_blank");
@@ -225,6 +252,33 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
     };
   };
   const personalityType = calculateRole(answers);
+  
+  // Track quiz completion in Sentry
+  useEffect(() => {
+    const quizData = {
+      answers,
+      locale: currentLocale,
+      topRecommendations: personalityType.recommendations.slice(0, 3).map(rec => rec.title),
+      timestamp: new Date().toISOString()
+    };
+    
+    Sentry.addBreadcrumb({
+      category: 'quiz',
+      message: 'Quiz completed',
+      level: 'info',
+      data: quizData
+    });
+    
+    Sentry.captureMessage('Quiz completed', {
+      level: 'info',
+      tags: {
+        event_type: 'quiz_completion',
+        locale: currentLocale
+      },
+      extra: quizData
+    });
+  }, [answers, currentLocale, personalityType.recommendations]);
+  
   return (
     <div className="mx-auto w-full max-w-2xl animate-fade-in">
       <Card className="border-0 bg-card shadow-arkad">
