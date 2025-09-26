@@ -23,6 +23,25 @@ type Role = {
   }>;
 };
 
+// Constants for unwanted host roles and distance penalty
+const UNWANTED_HOST_NAMES = [
+  "Event host",
+  "Company host",
+  "Decoration Host",
+  "Logistics host"
+] as const;
+
+// Constants for preferred host roles and distance boost
+const PREFERRED_HOST_NAMES = [
+  "Banquet host",
+  "Info Desk Host",
+  "Lounge host",
+  "Lunch host"
+] as const;
+
+const DISTANCE_PENALTY = 5.0;
+const DISTANCE_BOOST = 2.0;
+
 export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
   const t = useTranslations();
   const currentLocale = useLocale() as SupportedLocales;
@@ -233,10 +252,27 @@ export const QuizResults = ({ answers, onRestart }: QuizResultsProps) => {
     };
 
     // Find the 3 closest matching roles
-    const rolesWithDistances = roleData.map((role) => ({
-      ...role,
-      distance: calculateDistance(userAnswers, role.answers),
-    }));
+    const rolesWithDistances = roleData.map((role) => {
+      const baseDistance = calculateDistance(userAnswers, role.answers);
+
+      // Apply distance penalty to unwanted host roles
+      const isUnwantedRole = UNWANTED_HOST_NAMES.includes(role.name.en as typeof UNWANTED_HOST_NAMES[number]);
+
+      // Apply distance boost to preferred host roles
+      const isPreferredRole = PREFERRED_HOST_NAMES.includes(role.name.en as typeof PREFERRED_HOST_NAMES[number]);
+
+      let finalDistance = baseDistance;
+      if (isUnwantedRole) {
+        finalDistance += DISTANCE_PENALTY;
+      } else if (isPreferredRole) {
+        finalDistance -= DISTANCE_BOOST;
+      }
+
+      return {
+        ...role,
+        distance: finalDistance,
+      };
+    });
 
     const sortedRoles = rolesWithDistances.sort(
       (a, b) => a.distance - b.distance
